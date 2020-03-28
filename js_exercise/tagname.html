@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getelement by tag</title>
+    <script>
+        function changestylig()
+        {
+            var para = document.getElementsByTagName("p");
+            para[0].style.fontSize = "25px";
+            para[1].style.color="red";
+        }
+    </script>
+</head>
+<body>
+    <p>This is a paragraph 1</p>
+    <p>This is a paragraph 2</p>
+    <p>This is a paragraph 3</p>
+    <p>This is a paragraph 4</p>
+    <p>This is a paragraph 5</p>
+    <br>
+    <button onclick="changestylig()">Click me</button>
+    
+</body>
+</html>

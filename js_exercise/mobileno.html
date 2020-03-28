@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MobileNo</title>
+    <script>
+        // \d-match any digit(equal to [0-9])
+        // \w-match any word character(a-z,A-Z,0-9,& _)
+        // \s-mathc whitespace character(eg-spaces and tabs)
+        // \t-match a tab only
+        function validate()
+        {
+            var text = document.getElementById("text1").value;
+            var regx = /^[7-9]\d{9}$/;
+            if(regx.test(text))
+            {
+                document.getElementById("lbtext").innerHTML="valid";
+                document.getElementById("lbtext").style.visibility="visible";
+                document.getElementById("lbtext").style.color="green";
+            }
+            else
+            {
+                document.getElementById("lbtext").innerHTML="Invalid";
+                document.getElementById("lbtext").style.visibility="visible";
+                document.getElementById("lbtext").style.color="red";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <input id="text1" placeholder="Celphone" type="text"><br>
+        <label id="lbtext" style="color:red;visibility:hidden">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+
+    
+</body>
+</html>
